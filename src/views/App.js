@@ -1,7 +1,9 @@
 import React from 'react';
 import axios from 'axios';
-import { GlobalStyle } from '../assets/GlobalStyle';
-import { InputSection } from 'components/organisms/InputSection/InputSection';
+import InputSection from 'components/organisms/InputSection/InputSection';
+import { Wrapper } from './App.styles';
+import ResultSection from 'components/organisms/ResultSection/ResultSection';
+import AppProvider from 'providers/AppProvider';
 
 const App = () => {
   const options = {
@@ -24,10 +26,12 @@ const App = () => {
     });
 
   return (
-    <div>
-      <GlobalStyle />
-      <InputSection />
-    </div>
+    <AppProvider>
+      <Wrapper>
+        <InputSection />
+        <ResultSection />
+      </Wrapper>
+    </AppProvider>
   );
 };
 

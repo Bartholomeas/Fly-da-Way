@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 const size = {
   xs: '320px',
   s: '576px',
@@ -6,9 +7,9 @@ const size = {
 };
 
 const device = {
-  xs: `(min-width: ${size.xs})`,
-  s: `(min-width: ${size.s})`,
-  m: `(min-width: ${size.m})`,
-  l: `(min-width: ${size.l})`,
+  xs: `min-width: ${size.xs}`,
+  s: `min-width: ${size.s}`,
+  m: `min-width: ${size.m}`,
+  l: `min-width: ${size.l}`,
 };
 export default { size, device };
