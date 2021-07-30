@@ -3,16 +3,18 @@ import breakpoints from 'assets/breakpoints';
 
 export const ResultWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
+  height: auto;
   padding: 4rem 2rem;
   background-color: ${({ theme }) => theme.colors.baseBlue};
   overflow-y: scroll;
 
   @media only screen and (${breakpoints.device.m}) {
-    /* width: 70%; */
+    flex-direction: row;
     column-count: 2;
   }
 `;

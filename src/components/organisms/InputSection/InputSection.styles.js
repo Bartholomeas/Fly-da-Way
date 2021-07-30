@@ -3,6 +3,7 @@ import breakpoints from 'assets/breakpoints';
 
 export const InputWrapper = styled.div`
   display: flex;
+  align-self: flex-start;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -10,11 +11,11 @@ export const InputWrapper = styled.div`
   width: 100%;
   padding: 2rem 0;
   background-color: ${({ theme }) => theme.colors.baseLight};
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
 
   @media only screen and (${breakpoints.device.m}) {
     width: 30%;
-    /* height: 100%; */
+    height: 100vh;
   }
 `;
 
@@ -23,5 +24,4 @@ export const FormWrapper = styled.div`
   flex-direction: column;
   justify-content: space-around;
   height: 90%;
-  box-flex-group: skyblue;
 `;

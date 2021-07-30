@@ -81,6 +81,10 @@ export const PriceTag = styled.span`
   font-size: ${({ theme }) => theme.fontSize.s};
   background-color: ${({ theme }) => theme.colors.ctaColor};
   font-weight: bold;
+
+  @media only screen and (${breakpoints.device.m}) {
+    font-size: ${({ theme }) => theme.fontSize.m};
+  }
 `;
 
 export const Plane = styled.svg`

@@ -10,8 +10,8 @@ const InputSection = () => {
     <InputWrapper>
       <Logo />
       <FormWrapper>
-        {labels.map((label) => (
-          <FormField label={label} id={label}></FormField>
+        {labels.map((label, id) => (
+          <FormField key={id} label={label} id={label}></FormField>
         ))}
       </FormWrapper>
       <Button>Search</Button>

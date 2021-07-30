@@ -8,12 +8,12 @@ export const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   /* min-height: 100vh; */
-  height: 3000px;
+  /* height: 3000px; */
   margin: 0;
-  overflow-y: scroll;
+  overflow-y: hidden;
 
   @media only screen and (${breakpoints.device.m}) {
     flex-direction: row;
-    height: 100vh;
+    /* height: 100vh; */
   } ;
 `;
