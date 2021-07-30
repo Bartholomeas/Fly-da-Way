@@ -1,7 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
+import 'assets/fonts.css';
 
 export const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); */
 
 
 html {
@@ -11,13 +12,13 @@ html {
 
 *, *::after, *::before {
     box-sizing: inherit;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     font-size: 1.6rem;
 
 }

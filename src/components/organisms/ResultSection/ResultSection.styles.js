@@ -7,7 +7,6 @@ export const ResultWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.baseBlue};
 
   @media only screen and (${breakpoints.device.m}) {
-    /* height: 100%; */
     width: 70%;
   }
 `;

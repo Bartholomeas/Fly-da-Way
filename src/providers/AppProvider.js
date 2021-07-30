@@ -5,7 +5,7 @@ import { GlobalStyle } from 'assets/GlobalStyle';
 
 const AppProvider = ({ children }) => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider style={{ fontFamily: 'Poppins' }} theme={theme}>
       <GlobalStyle />
       {children}
     </ThemeProvider>

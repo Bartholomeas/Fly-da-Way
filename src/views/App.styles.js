@@ -6,14 +6,14 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: 0;
-  background-color: tomato;
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  height: 3000px;
+  margin: 0;
+  overflow-y: scroll;
 
   @media only screen and (${breakpoints.device.m}) {
     flex-direction: row;
-    background-color: gold;
     height: 100vh;
   } ;
 `;

@@ -4,7 +4,7 @@ import { ResultWrapper } from './ResultSection.styles';
 const ResultSection = () => {
   return (
     <ResultWrapper>
-      <h2>Results </h2>
+      <h1>Results </h1>
     </ResultWrapper>
   );
 };
