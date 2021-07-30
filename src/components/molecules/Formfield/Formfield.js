@@ -17,7 +17,7 @@ const FormField = ({ label, id, type = 'text' }) => {
   return (
     <Wrapper>
       <Label htmlFor={id}>{label}</Label>
-      <Input type={type} id={id}></Input>
+      <Input type={label === 'Date' ? 'date' : type} id={id}></Input>
     </Wrapper>
   );
 };

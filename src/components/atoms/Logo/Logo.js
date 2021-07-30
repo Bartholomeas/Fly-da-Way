@@ -11,8 +11,7 @@ to {
 `;
 
 const Wrapper = styled.div`
-  top: 2rem;
-  position: absolute;
+  /* position: absolute; */
   display: flex;
   text-align: center;
   align-items: center;

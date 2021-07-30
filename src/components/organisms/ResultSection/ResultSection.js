@@ -1,11 +1,25 @@
 import React from 'react';
-import { ResultWrapper } from './ResultSection.styles';
+import { ResultWrapper, ColorWrapper } from './ResultSection.styles';
+import FlyCard from 'components/molecules/FlyCard/FlyCard';
 
 const ResultSection = () => {
   return (
-    <ResultWrapper>
-      <h1>Results </h1>
-    </ResultWrapper>
+    <ColorWrapper>
+      <ResultWrapper>
+        <FlyCard />
+        <FlyCard />
+        <FlyCard />
+        <FlyCard />
+        <FlyCard />
+        <FlyCard />
+        <FlyCard />
+        <FlyCard />
+        <FlyCard />
+        <FlyCard />
+        <FlyCard />
+        <FlyCard />
+      </ResultWrapper>
+    </ColorWrapper>
   );
 };
 
