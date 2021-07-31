@@ -19,13 +19,13 @@ const Wrapper = styled.div`
 `;
 
 const Image = styled.svg`
-  height: 4rem;
+  height: 3rem;
   margin-right: 0.6rem;
   color: ${({ theme }) => theme.colors.ctaColor};
 `;
 
 const LogoText = styled.p`
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.baseBlue};
 `;
