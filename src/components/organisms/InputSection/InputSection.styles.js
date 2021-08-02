@@ -7,7 +7,7 @@ export const InputWrapper = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   padding: 2rem 0;
   background-color: ${({ theme }) => theme.colors.baseLight};
