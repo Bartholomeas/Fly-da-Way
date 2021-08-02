@@ -5,19 +5,7 @@ import { Button } from 'components/atoms/Button/Button';
 import axios from 'axios';
 import { Logo } from 'components/atoms/Logo/Logo';
 
-// const options = {
-//   method: 'GET',
-//   url: 'https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsedates/v1.0/PL/PLN/pl-PL/WRO-sky/LHR-sky/anytime',
-//   params: { inboundpartialdate: 'anytime' },
-//   headers: {
-//     'x-rapidapi-key': '8cf603764fmsh08c508df54e2a87p10f73ejsnf84f841e1df9',
-//     'x-rapidapi-host': 'skyscanner-skyscanner-flight-search-v1.p.rapidapi.com',
-//   },
-// };
-
-const InputSection = () => {
-  // eslint-disable-next-line no-unused-vars
-  const [info, setInfo] = useState([]);
+const InputSection = ({ setFlyInfo }) => {
   const [formValues, setFormValues] = useState({
     from: 'WRO',
     to: 'LHR',
@@ -35,16 +23,6 @@ const InputSection = () => {
     },
   };
 
-  // useEffect(() => {
-  //   (async () => {
-  //     const response = await axios.request(options);
-  //     const data = response.data.Quotes;
-  //     // console.log(response.data);
-
-  //     setInfo(data);
-  //   })();
-  // }, []);
-
   const handleInputChange = (e) => {
     setFormValues({
       ...formValues,
@@ -52,27 +30,13 @@ const InputSection = () => {
     });
   };
 
-  // const handleApiReq = (e) => {
-  //   e.preventDefault();
-  //   (async () => {
-  //     const response = await axios.request(options);
-  //     const data = response.data.Quotes;
-
-  //     setInfo(data);
-  //     console.log(info);
-  //   })();
-  //   console.log('inforeload');
-  // };
-
   const handleApiReq = async (e) => {
     e.preventDefault();
 
     const response = await axios.request(options);
     const data = response.data.Quotes;
 
-    setInfo(data);
-    console.log(info);
-    console.log('inforeload');
+    setFlyInfo(data);
   };
 
   return (
