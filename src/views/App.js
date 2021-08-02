@@ -17,12 +17,11 @@ originId: quote.OutBoundLeg.OriginId
 
 const App = () => {
   const [flyInfo, setFlyInfo] = useState([]);
-  console.log(flyInfo);
   return (
     <AppProvider>
       <Wrapper>
         <InputSection setFlyInfo={setFlyInfo} />
-        <ResultSection />
+        <ResultSection flyInfo={flyInfo} />
       </Wrapper>
     </AppProvider>
   );

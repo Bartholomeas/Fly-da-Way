@@ -8,7 +8,7 @@ export const ResultWrapper = styled.div`
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  height: auto;
+  min-height: 100vh;
   padding: 4rem 2rem;
   background-color: ${({ theme }) => theme.colors.baseBlue};
   overflow-y: scroll;
@@ -19,8 +19,10 @@ export const ResultWrapper = styled.div`
   }
 `;
 
-export const ColorWrapper = styled.div`
-  height: 100%;
-  width: 100%;
-  background-color: ${({ theme }) => theme.colors.baseBlue};
+export const FillInfo = styled.h1`
+  position: absolute;
+  left: 60%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-align: center;
 `;

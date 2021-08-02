@@ -4,7 +4,7 @@ import breakpoints from 'assets/breakpoints';
 export const CardBody = styled.div`
   position: relative;
   width: 90%;
-  height: 18rem;
+  height: 19rem;
   margin-bottom: 2rem;
   border-radius: 3px;
   background-color: #fff;
@@ -76,9 +76,9 @@ export const PriceTag = styled.span`
   border-radius: 3px;
   bottom: 1rem;
   right: 1rem;
-  padding: 0.2rem;
+  padding: 0.4rem;
   color: #fff;
-  font-size: ${({ theme }) => theme.fontSize.s};
+  /* font-size: ${({ theme }) => theme.fontSize.xs}; */
   background-color: ${({ theme }) => theme.colors.ctaColor};
   font-weight: bold;
 
