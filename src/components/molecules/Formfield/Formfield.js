@@ -13,11 +13,11 @@ export const Wrapper = styled.div`
   width: 25rem;
 `;
 
-const FormField = ({ label, id, type = 'text' }) => {
+const FormField = ({ onChange, label, name, id, value, placeholder = '', type = 'text' }) => {
   return (
     <Wrapper>
       <Label htmlFor={id}>{label}</Label>
-      <Input type={label === 'Date' ? 'date' : type} id={id}></Input>
+      <Input type={type} id={id} name={name} value={value} placeholder={placeholder} onChange={onChange}></Input>
     </Wrapper>
   );
 };

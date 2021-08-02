@@ -1,40 +1,58 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+/* eslint-disable no-unused-vars */
+import React from 'react';
 import InputSection from 'components/organisms/InputSection/InputSection';
 import { Wrapper } from './App.styles';
 import ResultSection from 'components/organisms/ResultSection/ResultSection';
 import AppProvider from 'providers/AppProvider';
 
+// const initialState = [
+//   {
+//     quoteId: '2',
+//     minPrice: '213',
+//     direct: false,
+//     carrierId: '1090',
+//     departureDate: '2021-12-11T00:00:00',
+//     destinationId: '65698',
+//     originId: '91519',
+//   },
+// ];
+
+// class Quote {
+//   constructor(quote, minPrice, direct, carrierId, departureDate, destinationId, originId) {
+//     this.quoteId = quote;
+//     this.minPrice = minPrice;
+//     this.direct = direct;
+//     this.carrierId = carrierId;
+//     this.departureDate = departureDate;
+//     this.destinationId = destinationId;
+//     this.originId = originId;
+//   }
+// }
+
+// const createQuote = (quote) => {
+//   const newQuote = new Quote(
+//     quote.QuoteId,
+//     quote.MinPrice,
+//     quote.Direct,
+//     quote.OutboundLeg.CarrierIds[0],
+//     quote.OutboundLeg.DepartureDate,
+//     quote.DestinationId,
+//     quote.OriginId
+//   );
+//   setInfo((info) => [...info, newQuote]);
+// };
+
+/*
+quote: quote.QuoteId,
+minPrice: quote.MinPrice,
+direct: quote.Direct,
+carrierId: quote.OutBoundLeg.CarrierId[0],
+departureDate: quote.OutBoundLeg.DepartureDate,
+destinationId: quote.OutBoundLeg.DestinationId,
+originId: quote.OutBoundLeg.OriginId
+*/
+
 const App = () => {
-  const [info, setInfo] = useState([]);
-
-  const options = {
-    method: 'GET',
-    url: 'https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsedates/v1.0/PL/PLN/pl-PL/SFO-sky/LAX-sky/anytime',
-    params: { inboundpartialdate: 'anytime' },
-    headers: {
-      'x-rapidapi-key': '8cf603764fmsh08c508df54e2a87p10f73ejsnf84f841e1df9',
-      'x-rapidapi-host': 'skyscanner-skyscanner-flight-search-v1.p.rapidapi.com',
-    },
-  };
-
-  useEffect(() => {
-    (async () => {
-      // const response = await axios.request(options);
-      const response = await axios.request(options);
-      console.log(response);
-    })();
-  }, [options]);
-
-  // axios
-  //   .request(options)
-  //   .then(function (response) {
-  //     console.log(response.data);
-  //   })
-  //   .catch(function (error) {
-  //     console.error(error);
-  //   });
-
   return (
     <AppProvider>
       <Wrapper>
