@@ -10,7 +10,7 @@ export const CardBody = styled.div`
   background-color: #fff;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
-  overflow: hidden;
+  /* overflow: hidden; */
   cursor: pointer;
 
   &:hover {
@@ -33,7 +33,6 @@ export const TopWrapper = styled.div`
 
 export const Time = styled.span`
   font-size: ${({ theme }) => theme.fontSize.m};
-  color: ${({ theme }) => theme.colors.ctaColor};
 `;
 
 export const InfoWrapper = styled.div`
@@ -58,11 +57,18 @@ export const Direction = styled.p`
 export const InfoTitle = styled.span`
   position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: ${({ attention }) => (attention ? 'column' : 'row')};
+  align-items: flex-end;
   width: auto;
   margin: 0;
-  color: ${({ theme }) => theme.colors.fontColor};
+  color: ${({ attention, theme: { colors } }) => (attention ? colors.ctaColor : colors.fontColor)};
   font-weight: bold;
+  white-space: nowrap;
+  font-size: ${({ theme }) => theme.fontSize.s};
+`;
+
+export const Date = styled.span`
+  font-weight: normal;
   font-size: ${({ theme }) => theme.fontSize.s};
 `;
 
@@ -78,7 +84,6 @@ export const PriceTag = styled.span`
   right: 1rem;
   padding: 0.4rem;
   color: #fff;
-  /* font-size: ${({ theme }) => theme.fontSize.xs}; */
   background-color: ${({ theme }) => theme.colors.ctaColor};
   font-weight: bold;
 
@@ -87,11 +92,12 @@ export const PriceTag = styled.span`
   }
 `;
 
-export const Plane = styled.svg`
+export const CarrierSign = styled.span`
   position: absolute;
-  opacity: 0.1;
-  height: 15rem;
-  width: auto;
-  left: 2rem;
-  top: 2.5rem;
+  bottom: 1rem;
+  left: 1rem;
+  opacity: 0.3;
+  color: ${({ theme }) => theme.colors.baseBlue};
+  font-size: 3.5rem;
+  font-weight: bold;
 `;

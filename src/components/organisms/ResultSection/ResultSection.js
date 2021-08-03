@@ -16,10 +16,10 @@ const ResultSection = ({ flyQuotes, flightInfos }) => {
               price={card.MinPrice}
               depDate={card.OutboundLeg.DepartureDate}
               direct={card.Direct}
-              carrierId={
-                flightInfos.carriers.forEach((carrier) => console.log(card))
-                // card.OutboundLeg.CarrierIds[0]
-              }
+              // carrierId={
+              //   flightInfos.carriers.forEach((carrier) => console.log(card))
+              //   // card.OutboundLeg.CarrierIds[0]
+              // }
             />
           );
         })
