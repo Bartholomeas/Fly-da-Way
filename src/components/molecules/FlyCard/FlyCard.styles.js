@@ -10,7 +10,7 @@ export const CardBody = styled.div`
   background-color: #fff;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
-  /* overflow: hidden; */
+  overflow: hidden;
   cursor: pointer;
 
   &:hover {
@@ -49,7 +49,7 @@ export const InfoWrapper = styled.div`
 
 export const Direction = styled.p`
   margin: 0;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   color: ${({ theme }) => theme.colors.darkerBlue};
 `;
@@ -92,12 +92,26 @@ export const PriceTag = styled.span`
   }
 `;
 
-export const CarrierSign = styled.span`
+export const CarrierSign = styled.p`
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 3rem;
   bottom: 1rem;
   left: 1rem;
   opacity: 0.3;
   color: ${({ theme }) => theme.colors.baseBlue};
-  font-size: 3.5rem;
+  font-size: 4rem;
   font-weight: bold;
+
+  @media only screen and (${breakpoints.device.m}) {
+    font-size: 5rem;
+    height: 4rem;
+  }
+  @media only screen and (${breakpoints.device.l}) {
+    font-size: 6.5rem;
+    height: 5rem;
+  }
 `;

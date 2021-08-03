@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   /* min-height: 100vh; */
   /* height: 3000px; */
   margin: 0;
-  overflow-y: hidden;
+  overflow: hidden;
 
   @media only screen and (${breakpoints.device.m}) {
     flex-direction: row;

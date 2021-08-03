@@ -1,13 +1,24 @@
 import React from 'react';
-import { ResultWrapper, FillInfo } from './ResultSection.styles';
+import { ResultWrapper, FillInfo, ResultInfo } from './ResultSection.styles';
 import FlyCard from 'components/molecules/FlyCard/FlyCard';
 
 const ResultSection = ({ flyQuotes, flightInfos }) => {
   console.log(flightInfos);
+
   return (
     <ResultWrapper>
+      <ResultInfo>Press card for more info</ResultInfo>
       {flyQuotes.length > 0 ? (
         flyQuotes.map((card) => {
+          let carrierName;
+          // eslint-disable-next-line no-unused-vars
+          const cardCarrier = flightInfos.carriers.forEach((carrier) => {
+            if (card.OutboundLeg.CarrierIds[0] === carrier.CarrierId) {
+              carrierName = carrier.Name;
+            }
+          });
+          console.log(card);
+
           return (
             <FlyCard
               key={card.QuoteId}
@@ -16,10 +27,7 @@ const ResultSection = ({ flyQuotes, flightInfos }) => {
               price={card.MinPrice}
               depDate={card.OutboundLeg.DepartureDate}
               direct={card.Direct}
-              // carrierId={
-              //   flightInfos.carriers.forEach((carrier) => console.log(card))
-              //   // card.OutboundLeg.CarrierIds[0]
-              // }
+              carrierId={carrierName}
             />
           );
         })

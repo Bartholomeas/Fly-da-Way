@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardBody, CarrierSign, TopWrapper, Time, Date, Direction, InfoTitle, InfoContent, PriceTag } from './FlyCard.styles';
+import { CardBody, CarrierSign, TopWrapper, Time, Date, Direction, InfoTitle, PriceTag } from './FlyCard.styles';
 
 const FlyCard = ({ from, to, price, depDate, direct, carrierId }) => {
   return (
@@ -12,7 +12,7 @@ const FlyCard = ({ from, to, price, depDate, direct, carrierId }) => {
           <Date>2021-10-01</Date>
         </InfoTitle>
       </TopWrapper>
-      <CarrierSign>Wizzair</CarrierSign>
+      <CarrierSign>{carrierId}</CarrierSign>
       {/* <InfoWrapper>
         <InfoTitle>
           Origin: <InfoContent>{from}</InfoContent>
