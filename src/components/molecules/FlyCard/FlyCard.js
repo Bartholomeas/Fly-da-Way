@@ -1,11 +1,24 @@
-import React from 'react';
-import { CardBody, CarrierSign, TopWrapper, Time, Date, Direction, InfoTitle, PriceTag } from './FlyCard.styles';
+import React, { useState } from 'react';
+import { CardBody, CarrierSign, TopWrapper, Time, Date, Direction, InfoTitle, PriceTag, InfoContent, InfoWrapper } from './FlyCard.styles';
 
-const FlyCard = ({ from, to, price, depDate, direct, carrierId }) => {
+const FlyCard = ({ from, to, price, depDate, direct, carrierId, time, onClick }) => {
+  const [flyTime, setFlyTime] = useState({});
+  const year = depDate.slice(0, 4);
+  const month = depDate.slice(5, 7);
+  const day = depDate.slice(8, 10);
+  const cardTime = new window.Date(`${parseInt(day, month, year)}`);
+
+  const result = time - cardTime;
+
+  // console.log(cardTime);
+  // console.log(parseInt(year), month, day);
+
   return (
-    <CardBody>
+    <CardBody onClick={onClick}>
       <TopWrapper>
-        <Direction>Pichlice {'-'} Lututów</Direction>
+        <Direction>
+          {from.slice(0, 4).toUpperCase()} {'-'} {to.slice(0, 4).toUpperCase()}
+        </Direction>
         <InfoTitle attention>
           <Time>21h</Time>
           <Date>10:26PM</Date>
@@ -13,7 +26,7 @@ const FlyCard = ({ from, to, price, depDate, direct, carrierId }) => {
         </InfoTitle>
       </TopWrapper>
       <CarrierSign>{carrierId}</CarrierSign>
-      {/* <InfoWrapper>
+      <InfoWrapper>
         <InfoTitle>
           Origin: <InfoContent>{from}</InfoContent>
         </InfoTitle>
@@ -29,7 +42,7 @@ const FlyCard = ({ from, to, price, depDate, direct, carrierId }) => {
         <InfoTitle>
           Time: <InfoContent>{depDate.slice(10)}</InfoContent>
         </InfoTitle>
-      </InfoWrapper> */}
+      </InfoWrapper>
       <PriceTag>{price}zł</PriceTag>
     </CardBody>
   );

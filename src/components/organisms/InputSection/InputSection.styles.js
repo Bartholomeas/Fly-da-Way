@@ -14,7 +14,7 @@ export const InputWrapper = styled.div`
   overflow-y: hidden;
 
   @media only screen and (${breakpoints.device.m}) {
-    width: 30%;
+    width: 30vw;
     height: 100vh;
   }
 `;
