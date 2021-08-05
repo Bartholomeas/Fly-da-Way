@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CardBody, CarrierSign, TopWrapper, Time, Date, Direction, InfoTitle, PriceTag, InfoContent, InfoWrapper } from './FlyCard.styles';
 
-const FlyCard = ({ from, to, price, depDate, direct, carrierId, time, onClick }) => {
+const FlyCard = ({ from, to, price, depDate, direct, carrierId, time, flightHour, onClick }) => {
   const [flyTime, setFlyTime] = useState({});
   const year = depDate.slice(0, 4);
   const month = depDate.slice(5, 7);
@@ -9,6 +9,8 @@ const FlyCard = ({ from, to, price, depDate, direct, carrierId, time, onClick })
   const cardTime = new window.Date(`${parseInt(day, month, year)}`);
 
   const result = time - cardTime;
+
+  console.log(flightHour.slice(11));
 
   // console.log(cardTime);
   // console.log(parseInt(year), month, day);

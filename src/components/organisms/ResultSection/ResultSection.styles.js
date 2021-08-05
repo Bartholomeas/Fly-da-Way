@@ -12,13 +12,12 @@ export const ResultWrapper = styled.div`
   min-height: 45vh;
   padding: 3rem 2rem;
   background-color: ${({ theme }) => theme.colors.baseBlue};
-  /* overflow-y: scroll; */
+  overflow-y: scroll;
 
   @media only screen and (${breakpoints.device.m}) {
-    min-height: 100vh;
+    height: 100vh;
     width: 70vw;
     flex-direction: row;
-    column-count: 2;
   }
 `;
 
@@ -35,7 +34,6 @@ export const FillInfo = styled.h1`
 `;
 
 export const ResultInfo = styled.p`
-  align-self: flex-start;
   justify-content: center;
   padding: 0.6rem;
   margin-bottom: 5rem;

@@ -15,17 +15,19 @@ export const Time = styled.span`
 `;
 
 export const InfoWrapper = styled.div`
-  /* position: absolute; */
   display: none;
+  position: absolute;
   flex-direction: column;
   /* justify-content: space-between; */
   /* align-items: flex-start; */
+  flex-wrap: wrap;
+  /* height: 80%; */
   bottom: 0;
-  height: 100%;
-  width: 100%;
+  width: 20rem;
   margin-left: 1rem;
   margin-bottom: 1rem;
-  background-color: orange;
+  /* top: 50%; */
+  /* left: 50%; */
 `;
 
 export const Direction = styled.p`
@@ -99,37 +101,36 @@ export const CarrierSign = styled.p`
 
 export const CardBody = styled.div`
   position: relative;
-  width: 90%;
+  width: 100%;
   height: 15rem;
   margin-bottom: 2rem;
   border-radius: 3px;
   background-color: #fff;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: 0.3s ease-in-out;
 
   &:hover {
     transform: scale(1.02);
   }
 
   &.active {
-    position: absolute;
+    /* position: fixed;
     top: 50%;
     left: 50%;
     height: 20rem;
+    width: 50rem;
     transform: translate(-50%, -50%);
     transform-origin: left;
-    z-index: 1000;
+    z-index: 1000; */
+    /* flex-grow: 10; */
+    /* width: 60%; */
+    height: 20rem;
     background-color: #e0ecf6;
 
     & ${InfoWrapper} {
       display: flex;
     }
-  }
-
-  @media only screen and (${breakpoints.device.m}) {
-    width: 49%;
   }
 `;

@@ -67,6 +67,7 @@ const ResultSection = ({ flyQuotes, flightInfos }) => {
               direct={card.Direct}
               carrierId={carrierName}
               time={currTime}
+              flightHour={card.QuoteDateTime.slice(11)}
             />
           );
         })
