@@ -1,4 +1,4 @@
 - Zrobić wygląd mobilny kart (moze position fixed)
 - dostosować wielkość fontów 
 - dodać modal z informacjami dotyczącymi lotnisk itd.
-- zrobic w koncu licznik do odlotu
+- zrobic w koncu licznik do odlotu              

@@ -10,10 +10,6 @@ export const TopWrapper = styled.div`
   width: 100%;
 `;
 
-export const Time = styled.span`
-  font-size: ${({ theme }) => theme.fontSize.m};
-`;
-
 export const InfoWrapper = styled.div`
   display: none;
   position: absolute;
@@ -31,10 +27,18 @@ export const InfoWrapper = styled.div`
 `;
 
 export const Direction = styled.p`
-  margin: 0;
-  font-size: 2.6rem;
+  position: absolute;
+  /* margin-left: 1rem; */
+  margin-top: 1rem;
+  font-size: ${({ theme }) => theme.fontSize.m};
   font-weight: bold;
   color: ${({ theme }) => theme.colors.darkerBlue};
+
+  @media only screen and (${breakpoints.device.s}) {
+    transform: translateX(-50%);
+    left: 50%;
+    font-size: 2.6rem;
+  }
 `;
 
 export const InfoTitle = styled.span`
@@ -47,11 +51,6 @@ export const InfoTitle = styled.span`
   color: ${({ attention, theme: { colors } }) => (attention ? colors.ctaColor : colors.fontColor)};
   font-weight: bold;
   white-space: nowrap;
-  font-size: ${({ theme }) => theme.fontSize.s};
-`;
-
-export const Date = styled.span`
-  font-weight: normal;
   font-size: ${({ theme }) => theme.fontSize.s};
 `;
 
@@ -102,7 +101,7 @@ export const CarrierSign = styled.p`
 export const CardBody = styled.div`
   position: relative;
   width: 100%;
-  height: 15rem;
+  height: 13rem;
   margin-bottom: 2rem;
   border-radius: 3px;
   background-color: #fff;
@@ -126,11 +125,51 @@ export const CardBody = styled.div`
     z-index: 1000; */
     /* flex-grow: 10; */
     /* width: 60%; */
-    height: 20rem;
+    height: 15rem;
     background-color: #e0ecf6;
 
     & ${InfoWrapper} {
       display: flex;
     }
   }
+`;
+
+export const Timeline = styled.span`
+  position: relative;
+  margin: 0 2rem;
+  color: ${({ theme }) => theme.colors.darkerBlue};
+  font-size: ${({ theme }) => theme.fontSize.s};
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 5rem;
+    height: 2px;
+    top: 0;
+    left: 0;
+    transform: translateX(-20%);
+    background-color: ${({ theme }) => theme.colors.baseBlue};
+  }
+`;
+
+export const TimeInfo = styled.div`
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0;
+  top: 1rem;
+  right: 1rem;
+  color: ${({ theme }) => theme.colors.ctaColor};
+  font-weight: bold;
+  white-space: nowrap;
+  font-size: ${({ theme }) => theme.fontSize.s};
+`;
+
+export const Date = styled.span`
+  font-weight: normal;
+  font-size: ${({ theme }) => theme.fontSize.s};
+`;
+export const Time = styled.span`
+  font-size: 1.6rem;
 `;

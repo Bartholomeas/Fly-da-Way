@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CardBody, CarrierSign, TopWrapper, Time, Date, Direction, InfoTitle, PriceTag, InfoContent, InfoWrapper } from './FlyCard.styles';
+import { CardBody, CarrierSign, Time, Date, Direction, InfoTitle, PriceTag, InfoContent, InfoWrapper, Timeline, TimeInfo } from './FlyCard.styles';
 
 const FlyCard = ({ from, to, price, depDate, direct, carrierId, time, flightHour, onClick }) => {
   const [flyTime, setFlyTime] = useState({});
@@ -10,23 +10,18 @@ const FlyCard = ({ from, to, price, depDate, direct, carrierId, time, flightHour
 
   const result = time - cardTime;
 
-  console.log(flightHour.slice(11));
-
-  // console.log(cardTime);
   // console.log(parseInt(year), month, day);
 
   return (
     <CardBody onClick={onClick}>
-      <TopWrapper>
-        <Direction>
-          {from.slice(0, 4).toUpperCase()} {'-'} {to.slice(0, 4).toUpperCase()}
-        </Direction>
-        <InfoTitle attention>
-          <Time>21h</Time>
-          <Date>10:26PM</Date>
-          <Date>2021-10-01</Date>
-        </InfoTitle>
-      </TopWrapper>
+      <Direction>
+        {from.slice(0, 4).toUpperCase()} <Timeline>2:36h</Timeline> {to.slice(0, 4).toUpperCase()}
+      </Direction>
+      <TimeInfo>
+        <Time>21h</Time>
+        <Date>10:26PM</Date>
+        <Date>2021-10-01</Date>
+      </TimeInfo>
       <CarrierSign>{carrierId}</CarrierSign>
       <InfoWrapper>
         <InfoTitle>
@@ -42,7 +37,7 @@ const FlyCard = ({ from, to, price, depDate, direct, carrierId, time, flightHour
           Departure date: <InfoContent>{depDate.slice(0, 10)}</InfoContent>
         </InfoTitle>
         <InfoTitle>
-          Time: <InfoContent>{depDate.slice(10)}</InfoContent>
+          Time: <InfoContent>{flightHour}</InfoContent>
         </InfoTitle>
       </InfoWrapper>
       <PriceTag>{price}zł</PriceTag>

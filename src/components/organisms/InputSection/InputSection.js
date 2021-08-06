@@ -4,6 +4,7 @@ import FormField from 'components/molecules/Formfield/Formfield';
 import { Button } from 'components/atoms/Button/Button';
 import axios from 'axios';
 import { Logo } from 'components/atoms/Logo/Logo';
+import InfoButton from 'components/atoms/InfoButton/InfoButton';
 
 const InputSection = ({ setFlyQuotes, setFlightInfos }) => {
   const [flightFormValues, setFlightFormValues] = useState({
@@ -49,6 +50,7 @@ const InputSection = ({ setFlyQuotes, setFlightInfos }) => {
   return (
     <InputWrapper>
       <Logo />
+
       <FormWrapper onSubmit={handleApiReq}>
         <FormField
           label="From"
@@ -77,6 +79,7 @@ const InputSection = ({ setFlyQuotes, setFlightInfos }) => {
         ></FormField>
         <Button type="submit">Search</Button>
       </FormWrapper>
+      <InfoButton />
     </InputWrapper>
   );
 };
