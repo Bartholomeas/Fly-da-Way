@@ -5,8 +5,12 @@ import { Button } from 'components/atoms/Button/Button';
 import axios from 'axios';
 import { Logo } from 'components/atoms/Logo/Logo';
 import InfoButton from 'components/atoms/InfoButton/InfoButton';
+import useModal from 'components/molecules/Modal/useModal';
+import Modal from 'components/molecules/Modal/Modal';
 
 const InputSection = ({ setFlyQuotes, setFlightInfos }) => {
+  const { isOpen, handleOpenModal, handleCloseModal } = useModal();
+
   const [flightFormValues, setFlightFormValues] = useState({
     from: 'WRO',
     to: 'LHR',
@@ -34,23 +38,31 @@ const InputSection = ({ setFlyQuotes, setFlightInfos }) => {
   const handleApiReq = async (e) => {
     e.preventDefault();
 
-    const response = await axios.request(options);
-    const quotes = response.data.Quotes;
-    const data = response.data;
-    console.log(data);
-
-    setFlightInfos({
-      carriers: data.Carriers,
-      places: data.Places,
+    const response = await axios.request(options).catch((err) => {
+      console.log(err);
     });
 
-    setFlyQuotes(quotes);
+    if (!response) {
+      console.log('ERROR!');
+      return;
+    } else {
+      const quotes = response.data.Quotes;
+      const data = response.data;
+      console.log(data);
+
+      setFlightInfos({
+        carriers: data.Carriers,
+        places: data.Places,
+      });
+
+      setFlyQuotes(quotes);
+    }
   };
 
   return (
     <InputWrapper>
       <Logo />
-
+      <Modal isOpen={isOpen} handleClose={handleCloseModal} />
       <FormWrapper onSubmit={handleApiReq}>
         <FormField
           label="From"
@@ -79,7 +91,7 @@ const InputSection = ({ setFlyQuotes, setFlightInfos }) => {
         ></FormField>
         <Button type="submit">Search</Button>
       </FormWrapper>
-      <InfoButton />
+      <InfoButton onClick={handleOpenModal} />
     </InputWrapper>
   );
 };

@@ -4,6 +4,7 @@ import FlyCard from 'components/molecules/FlyCard/FlyCard';
 
 const ResultSection = ({ flyQuotes, flightInfos }) => {
   const [currTime, setCurrTime] = useState(0);
+
   useEffect(() => {
     setCurrTime(new Date());
   }, []);
