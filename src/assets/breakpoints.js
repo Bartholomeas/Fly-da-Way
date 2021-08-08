@@ -1,6 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 const size = {
-  xs: '320px',
+  xs: '470px',
   s: '576px',
   m: '768px',
   l: '992px',

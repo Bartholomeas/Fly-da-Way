@@ -9,7 +9,7 @@ export const InputWrapper = styled.div`
   align-items: center;
   height: 100vh;
   width: 100%;
-  padding: 2rem 0;
+  padding: 0 0 2rem 0;
   background-color: ${({ theme }) => theme.colors.baseLight};
   overflow-y: hidden;
 

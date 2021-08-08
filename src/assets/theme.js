@@ -4,8 +4,8 @@ export const theme = {
     lightGrey: '#EDF3F9',
     baseBlue: '#7FA9D0',
     darkerBlue: '#447AAD',
-    // fontColor: '#7E8F9F',
-    fontColor: '#5F6367',
+    fontColor: '#7C8C9C',
+    // fontColor: '#5F6367',
     ctaColor: '#E44764',
   },
   fontSize: {

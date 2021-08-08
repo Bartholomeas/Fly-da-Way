@@ -1,27 +1,21 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
-
-const wiggle = keyframes`
-from {
-    transform: rotate(-5deg);
-}
-to {
-    transform: rotate(5deg);
-}
-`;
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  /* position: absolute; */
   display: flex;
   text-align: center;
   align-items: center;
-  animation: ${wiggle} 3s infinite alternate;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  top: 0;
+  /* background-color: ${({ theme }) => theme.colors.lightGrey}; */
 `;
 
 const Image = styled.svg`
   height: 3rem;
   margin-right: 0.6rem;
-  color: ${({ theme }) => theme.colors.ctaColor};
+  color: ${({ theme }) => theme.colors.lightGrey};
 `;
 
 const LogoText = styled.p`

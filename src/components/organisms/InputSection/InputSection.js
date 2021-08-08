@@ -5,8 +5,8 @@ import { Button } from 'components/atoms/Button/Button';
 import axios from 'axios';
 import { Logo } from 'components/atoms/Logo/Logo';
 import InfoButton from 'components/atoms/InfoButton/InfoButton';
-import useModal from 'components/molecules/Modal/useModal';
-import Modal from 'components/molecules/Modal/Modal';
+import useModal from 'hooks/useModal';
+import Modal from 'components/organisms/Modal/Modal';
 
 const InputSection = ({ setFlyQuotes, setFlightInfos }) => {
   const { isOpen, handleOpenModal, handleCloseModal } = useModal();

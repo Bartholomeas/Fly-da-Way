@@ -28,14 +28,15 @@ export const InfoWrapper = styled.div`
 
 export const Direction = styled.p`
   position: absolute;
-  /* margin-left: 1rem; */
+  margin-left: 1rem;
   margin-top: 1rem;
   font-size: ${({ theme }) => theme.fontSize.m};
   font-weight: bold;
   color: ${({ theme }) => theme.colors.darkerBlue};
 
-  @media only screen and (${breakpoints.device.s}) {
+  @media only screen and (${breakpoints.device.xs}) {
     transform: translateX(-50%);
+    margin-left: 0;
     left: 50%;
     font-size: 2.6rem;
   }

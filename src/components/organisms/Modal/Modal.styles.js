@@ -71,3 +71,31 @@ export const Input = styled.input`
   height: 100%;
   border: none;
 `;
+
+export const ModalList = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+  width: 100%;
+  height: 70%;
+  background-color: ${({ theme }) => theme.colors.baseLight};
+  overflow-y: auto;
+`;
+export const ModalAirport = styled.span`
+  margin-left: 1rem;
+  color: ${({ theme }) => theme.colors.fontColor};
+  font-weight: bold;
+`;
+
+export const ModalItem = styled.p`
+  color: ${({ theme }) => theme.colors.fontColor};
+`;
+
+export const ModalNotification = styled.p`
+  width: 50%;
+  align-self: center;
+  text-align: center;
+  color: ${({ theme }) => theme.colors.fontColor};
+`;
