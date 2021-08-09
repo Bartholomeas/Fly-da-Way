@@ -2,6 +2,7 @@
   "name": "fly-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://bartholomeas.github.io/Fly-da-Way/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
@@ -19,7 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gp-pages -d build"
   },
   "browserslist": {
     "production": [
@@ -36,6 +38,7 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
+    "gh-pages": "^3.2.3",
     "prettier": "^2.3.2"
   }
 }

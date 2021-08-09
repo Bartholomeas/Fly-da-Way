@@ -13,10 +13,11 @@ export const TopWrapper = styled.div`
 export const InfoWrapper = styled.div`
   display: none;
   position: absolute;
-  flex-direction: column;
+  /* flex-direction: column; */
   flex-wrap: wrap;
   bottom: 0;
-  width: 20rem;
+  /* width: 20rem; */
+  height: 5rem;
   margin-left: 1rem;
   margin-bottom: 1rem;
 `;
