@@ -1,14 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ResultWrapper, FillInfo, ResultInfo } from './ResultSection.styles';
 import FlyCard from 'components/molecules/FlyCard/FlyCard';
 
 const ResultSection = ({ flyQuotes, flightInfos }) => {
-  const [currTime, setCurrTime] = useState(0);
-
-  useEffect(() => {
-    setCurrTime(new Date());
-  }, []);
-
   let carrierName;
   const checkCarrier = (card) => {
     flightInfos.carriers.forEach((carrier) => {
@@ -53,6 +47,7 @@ const ResultSection = ({ flyQuotes, flightInfos }) => {
       {flyQuotes.length > 0 ? <ResultInfo>Press card for more info</ResultInfo> : null}
       {flyQuotes.length > 0 ? (
         flyQuotes.map((card) => {
+          console.log(card);
           checkCarrier(card);
           checkOrigin(card);
           checkDestination(card);
@@ -65,9 +60,9 @@ const ResultSection = ({ flyQuotes, flightInfos }) => {
               to={toName}
               price={card.MinPrice}
               depDate={card.OutboundLeg.DepartureDate}
+              depTime={card.QuoteDateTime}
               direct={card.Direct}
               carrierId={carrierName}
-              time={currTime}
               flightHour={card.QuoteDateTime.slice(11, 16)}
             />
           );

@@ -48,7 +48,6 @@ const InputSection = ({ setFlyQuotes, setFlightInfos }) => {
     } else {
       const quotes = response.data.Quotes;
       const data = response.data;
-      console.log(data);
 
       setFlightInfos({
         carriers: data.Carriers,

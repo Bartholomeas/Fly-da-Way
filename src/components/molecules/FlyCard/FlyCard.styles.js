@@ -14,16 +14,11 @@ export const InfoWrapper = styled.div`
   display: none;
   position: absolute;
   flex-direction: column;
-  /* justify-content: space-between; */
-  /* align-items: flex-start; */
   flex-wrap: wrap;
-  /* height: 80%; */
   bottom: 0;
   width: 20rem;
   margin-left: 1rem;
   margin-bottom: 1rem;
-  /* top: 50%; */
-  /* left: 50%; */
 `;
 
 export const Direction = styled.p`
