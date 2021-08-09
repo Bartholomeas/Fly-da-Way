@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Fly-da-Way/static/css/main.a84db640.chunk.css",
+    "main.js": "/Fly-da-Way/static/js/main.25141160.chunk.js",
+    "main.js.map": "/Fly-da-Way/static/js/main.25141160.chunk.js.map",
+    "runtime-main.js": "/Fly-da-Way/static/js/runtime-main.153a821a.js",
+    "runtime-main.js.map": "/Fly-da-Way/static/js/runtime-main.153a821a.js.map",
+    "static/js/2.187efd6b.chunk.js": "/Fly-da-Way/static/js/2.187efd6b.chunk.js",
+    "static/js/2.187efd6b.chunk.js.map": "/Fly-da-Way/static/js/2.187efd6b.chunk.js.map",
+    "index.html": "/Fly-da-Way/index.html",
+    "static/css/main.a84db640.chunk.css.map": "/Fly-da-Way/static/css/main.a84db640.chunk.css.map",
+    "static/js/2.187efd6b.chunk.js.LICENSE.txt": "/Fly-da-Way/static/js/2.187efd6b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.153a821a.js",
+    "static/js/2.187efd6b.chunk.js",
+    "static/css/main.a84db640.chunk.css",
+    "static/js/main.25141160.chunk.js"
+  ]
+}
