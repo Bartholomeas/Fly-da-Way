@@ -1,8 +1,12 @@
 import React from 'react';
 import { ResultWrapper, FillInfo, ResultInfo } from './ResultSection.styles';
 import FlyCard from 'components/molecules/FlyCard/FlyCard';
+import { useResults } from 'hooks/useResults';
 
 const ResultSection = ({ flyQuotes, flightInfos }) => {
+  const { checkCarrierr } = useResults();
+
+  console.log(checkCarrierr);
   let carrierName;
   const checkCarrier = (card) => {
     flightInfos.carriers.forEach((carrier) => {

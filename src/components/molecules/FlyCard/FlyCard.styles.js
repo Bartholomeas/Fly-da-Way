@@ -13,13 +13,18 @@ export const TopWrapper = styled.div`
 export const InfoWrapper = styled.div`
   display: none;
   position: absolute;
-  /* flex-direction: column; */
+  flex-direction: column;
   flex-wrap: wrap;
+  width: 20rem;
   bottom: 0;
-  /* width: 20rem; */
-  height: 5rem;
   margin-left: 1rem;
   margin-bottom: 1rem;
+
+  @media only screen and (${breakpoints.device.m}) {
+    column-count: 2;
+    height: 50%;
+    width: 80%;
+  }
 `;
 
 export const Direction = styled.p`
@@ -42,13 +47,13 @@ export const InfoTitle = styled.span`
   position: relative;
   display: flex;
   flex-direction: ${({ attention }) => (attention ? 'column' : 'row')};
-  align-items: flex-end;
+  /* align-items: flex-end; */
   width: auto;
   margin: 0;
   color: ${({ attention, theme: { colors } }) => (attention ? colors.ctaColor : colors.fontColor)};
   font-weight: bold;
   white-space: nowrap;
-  font-size: ${({ theme }) => theme.fontSize.s};
+  font-size: 1.7rem;
 `;
 
 export const InfoContent = styled.span`
@@ -107,23 +112,10 @@ export const CardBody = styled.div`
   cursor: pointer;
   transition: 0.3s ease-in-out;
 
-  &:hover {
-    transform: scale(1.02);
-  }
-
   &.active {
-    /* position: fixed;
-    top: 50%;
-    left: 50%;
-    height: 20rem;
-    width: 50rem;
-    transform: translate(-50%, -50%);
-    transform-origin: left;
-    z-index: 1000; */
-    /* flex-grow: 10; */
-    /* width: 60%; */
     height: 15rem;
-    background-color: #e0ecf6;
+    background-color: #ebf6ff;
+    transform: scale(1.02);
 
     & ${InfoWrapper} {
       display: flex;
