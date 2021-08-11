@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { ResultWrapper, FillInfo, ResultInfo } from './ResultSection.styles';
 import FlyCard from 'components/molecules/FlyCard/FlyCard';
-import { useResults } from 'hooks/useResults';
+import { UserContext } from 'views/App';
 
-const ResultSection = ({ flyQuotes, flightInfos }) => {
-  const { checkCarrierr } = useResults();
+const ResultSection = () => {
+  const { flyQuotes, flightInfos } = useContext(UserContext);
 
-  console.log(checkCarrierr);
   let carrierName;
   const checkCarrier = (card) => {
     flightInfos.carriers.forEach((carrier) => {
@@ -51,7 +50,6 @@ const ResultSection = ({ flyQuotes, flightInfos }) => {
       {flyQuotes.length > 0 ? <ResultInfo>Press card for more info</ResultInfo> : null}
       {flyQuotes.length > 0 ? (
         flyQuotes.map((card) => {
-          console.log(card);
           checkCarrier(card);
           checkOrigin(card);
           checkDestination(card);
